@@ -1,0 +1,20 @@
+:root {
+	--foreground: #333;
+	--background: hwb(0 9% 90%);
+	--highlight: hsl(256, 80%, 30%);
+
+	;
+
+	--primary: #fff;
+	--secondary: rgb(5, 0, 0);
+
+	--padding: 1rem;
+
+	--border-radius: 0.5rem;
+	--border-size: 3px;
+
+	--font-size-large: 1.5rem;
+	--font-size-small: 0.75rem;
+
+	--font-size-regular: 1rem;
+}
