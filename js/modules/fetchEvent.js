@@ -12,7 +12,7 @@ export default async function fetchEvent() {
       id: event.id,
       venue: event._embedded?.venues?.[0]?.name,
       city: event._embedded?.venues?.[0].city?.name,
-      img: event.images?.[6]?.url,
+      image: event.images?.[6]?.url,
       date: event.dates?.start.localDate,
       url: event.url,
     };

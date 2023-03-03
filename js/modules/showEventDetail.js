@@ -1,7 +1,6 @@
-const ulContainer = document.querySelector(".ul-container");
-
 export default function showEventDetail(events) {
   const cards = document.querySelectorAll(".card");
+
   cards.forEach((card) => {
     card.addEventListener("click", showDetail);
   });
@@ -13,7 +12,7 @@ export default function showEventDetail(events) {
 
     // create a link element with the event id as a query string parameter
     const linkElement = document.createElement("a");
-    linkElement.href = `eventDetail.html?eventId=${eventId}`;
+    linkElement.href = `event.html?id=${clickedEvent.id}`;
 
     const imageElement = document.createElement("img");
     imageElement.classList.add("event__image");
@@ -25,11 +24,14 @@ export default function showEventDetail(events) {
 
     linkElement.appendChild(imageElement);
     linkElement.appendChild(dateElement);
-    const eventContainer = document.getElementById("event-container");
+    const eventContainer = document.querySelector(".event-detail-container");
     if (eventContainer) {
       eventContainer.appendChild(linkElement);
     } else {
       console.log("Could not find event container element.");
     }
+
+    // redirect to the new page
+    window.location.href = linkElement.href;
   }
 }
